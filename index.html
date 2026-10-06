@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Teerth Avila | Community Portal</title>
+<meta name="description" content="Teerth Avila community information portal for residents and visitors.">
+<style>
+:root{--navy:#102d46;--blue:#246a9f;--green:#4c8b6d;--cream:#f7f5ef;--ink:#182431;--muted:#687583;--line:#dfe5e9;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
+header{position:sticky;top:0;z-index:20;background:rgba(16,45,70,.96);color:white;padding:15px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:11px}.mark{width:42px;height:42px;border:1px solid #ffffff55;border-radius:12px;display:grid;place-items:center;font-weight:800;background:#ffffff15}.logo strong{font-size:16px}.logo small{display:block;color:#cbd9e4;font-size:11px;margin-top:2px}
+nav a{color:#e8f0f5;text-decoration:none;margin-left:22px;font-size:13px;font-weight:600}nav a:hover{color:#bfe1cf}
+.hero{min-height:570px;background:linear-gradient(115deg,#102d46 0%,#1e587f 62%,#4c8b6d 100%);color:white;padding:85px 6%;display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:2px;color:#bfe1cf;font-weight:800;font-size:12px}.hero h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(44px,6vw,76px);line-height:.98;margin:14px 0 20px}.hero p{font-size:17px;line-height:1.8;color:#dce8ef;max-width:680px}.btn{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:700;font-size:13px}.primary{background:white;color:var(--navy)}.ghost{border:1px solid #ffffff66;color:white;margin-left:8px}
+.visual{height:360px;border-radius:28px;background:linear-gradient(145deg,#dce8e8,#9bb8c4);position:relative;overflow:hidden;box-shadow:0 25px 70px #06172455}.sun{position:absolute;width:180px;height:180px;border-radius:50%;background:#f6e4ad;right:-40px;top:-35px;opacity:.7}.hill{position:absolute;bottom:-40px;width:120%;height:150px;background:#527d68;border-radius:50% 50% 0 0;left:-10%}.building{position:absolute;bottom:45px;left:18%;width:58%;height:210px;background:#f5f1e8;border-radius:7px 7px 2px 2px;box-shadow:20px 10px 30px #19384a55}.building:before{content:"";position:absolute;left:-32px;bottom:0;border-bottom:210px solid #d7ddd7;border-left:32px solid transparent;width:0}.win{position:absolute;inset:22px 18px;display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.win i{background:#6e9db7;border-radius:3px;box-shadow:inset 0 0 0 3px #dbe4e5}
+section{padding:75px 6%}.intro{background:var(--cream)}.heading{max-width:720px;margin-bottom:30px}.eyebrow{color:var(--green);font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:1.6px}.heading h2{font:500 39px/1.15 Georgia,serif;margin:8px 0 10px}.heading p{color:var(--muted);line-height:1.75}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.stat{background:white;border:1px solid var(--line);padding:25px;border-radius:15px}.stat b{font-size:30px;color:var(--navy)}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:6px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:18px;border-left:3px solid var(--green);background:#f7faf8}.fact b{display:block;font-size:13px;margin-bottom:5px}.fact span{font-size:13px;color:var(--muted);line-height:1.5}
+.amenities{background:#f6f8f9}.amenity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.amenity{background:white;border:1px solid var(--line);border-radius:15px;padding:22px}.ico{font-size:25px;margin-bottom:15px}.amenity h3{font-size:15px;margin:0 0 7px}.amenity p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{border:1px solid var(--line);border-radius:18px;padding:28px}.panel h3{margin-top:0}.rows div{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}.rows div:last-child{border-bottom:0}.rows span{color:var(--muted);text-align:right}
+.sources{background:#102d46;color:#dce8ef}.sources a{color:#bfe1cf}.sources p{font-size:13px;line-height:1.7}.source-list{display:grid;gap:9px}
+footer{background:#0a2032;color:#aebfca;padding:24px 6%;font-size:12px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:60px}.visual{height:280px}.stats,.amenity-grid{grid-template-columns:1fr 1fr}.about,.info{grid-template-columns:1fr}}
+@media(max-width:500px){section{padding:55px 5%}.stats,.amenity-grid,.facts{grid-template-columns:1fr}.hero{padding-left:5%;padding-right:5%}.hero h1{font-size:50px}.ghost{margin-left:0}.building{left:20%;width:60%}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><div class="mark">TA</div><div><strong>Teerth Avila</strong><small>Community Portal</small></div></div>
+  <nav><a href="#about">About</a><a href="#amenities">Amenities</a><a href="#details">Details</a><a href="#sources">Sources</a></nav>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="kicker">Sus · Pune · Maharashtra</div>
+    <h1>Teerth<br>Avila</h1>
+    <p>A community-focused reference website for the residential project at Sus, Pune. This original demo brings together publicly available project information in a clean resident-portal style.</p>
+    <a class="btn primary" href="#details">Explore project</a>
+    <a class="btn ghost" href="#sources">View sources</a>
+  </div>
+  <div class="visual" aria-label="Original architectural illustration">
+    <div class="sun"></div><div class="hill"></div>
+    <div class="building"><div class="win">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="heading">
+    <div class="eyebrow">Verified project snapshot</div>
+    <h2>Designed around the real Teerth Avila project</h2>
+    <p>The figures below are based on publicly available developer and RERA-related information. Where public sources disagree, the site avoids presenting the disputed figure as fact.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>506</b><span>Total units reported in RERA-related public records</span></div>
+    <div class="stat"><b>4</b><span>Buildings / wings reported in RERA-related records</span></div>
+    <div class="stat"><b>22,926</b><span>Approx. project area in sq. metres</span></div>
+    <div class="stat"><b>P52100034662</b><span>MahaRERA registration number</span></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div class="heading">
+      <div class="eyebrow">About the project</div>
+      <h2>A residential address in Sus, Pune</h2>
+      <p>Teerth Realties describes Teerth Avila as a residential development between Sus Hills and Baner Link Road. Public records place the project at Sus, Mulshi, Pune, near Vidya Valley School Road.</p>
+      <p>The developer identifies the project with MahaRERA registration <b>P52100034662</b>. Public RERA-related records identify a project area of 22,926 sq. m and four building records.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>Location</b><span>Vidya Valley School Road, Parkhe Vasti, Sus, Pune 411021</span></div>
+      <div class="fact"><b>Developer</b><span>Teerth Developers / Teerth Realties</span></div>
+      <div class="fact"><b>Configurations</b><span>Developer page presents 2.5, 3 &amp; 4 BHK homes.</span></div>
+      <div class="fact"><b>Project type</b><span>Residential development with lifestyle amenities.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="amenities" id="amenities">
+  <div class="heading">
+    <div class="eyebrow">Lifestyle</div>
+    <h2>Publicly listed amenities</h2>
+    <p>A selection of amenities reported across the developer and property information sources.</p>
+  </div>
+  <div class="amenity-grid">
+    <div class="amenity"><div class="ico">🏊</div><h3>Swimming Pool</h3><p>Listed among project facilities.</p></div>
+    <div class="amenity"><div class="ico">🏋</div><h3>Gymnasium</h3><p>Fitness facility listed publicly.</p></div>
+    <div class="amenity"><div class="ico">🌳</div><h3>Children's Play Area</h3><p>Dedicated play space listed publicly.</p></div>
+    <div class="amenity"><div class="ico">🎾</div><h3>Tennis Court</h3><p>Outdoor recreation facility listed publicly.</p></div>
+    <div class="amenity"><div class="ico">🎯</div><h3>Indoor Games</h3><p>Indoor recreation is listed among amenities.</p></div>
+    <div class="amenity"><div class="ico">🧘</div><h3>Yoga &amp; Meditation</h3><p>Yoga and meditation zones are publicly listed.</p></div>
+    <div class="amenity"><div class="ico">🚗</div><h3>Car Parking</h3><p>Covered parking is reported in project details.</p></div>
+    <div class="amenity"><div class="ico">🔋</div><h3>Car Charging</h3><p>Car charging station is listed in public amenity information.</p></div>
+  </div>
+</section>
+
+<section id="details">
+  <div class="heading"><div class="eyebrow">Project details</div><h2>Useful information at a glance</h2></div>
+  <div class="info">
+    <div class="panel">
+      <h3>Project information</h3>
+      <div class="rows">
+        <div><b>RERA No.</b><span>P52100034662</span></div>
+        <div><b>Land area</b><span>22,926 sq. m (public RERA-related record)</span></div>
+        <div><b>Buildings</b><span>4 (RERA-related public record)</span></div>
+        <div><b>Location</b><span>Sus, Mulshi, Pune 411021</span></div>
+        <div><b>Survey references</b><span>127/1 &amp; 2 Part/A/3, 127/1 &amp; 2 Part/A/2, 127/1 &amp; 2 Part/A/4, 87 Part/128 Part/A/1</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Useful links</h3>
+      <div class="rows">
+        <div><b>Developer</b><span><a href="https://www.teerthrealties.com/projects/teerth-avila" target="_blank" rel="noopener">Teerth Avila project page</a></span></div>
+        <div><b>Developer projects</b><span><a href="https://www.teerthrealties.com/projects" target="_blank" rel="noopener">Project portfolio</a></span></div>
+        <div><b>RERA ID</b><span>P52100034662</span></div>
+        <div><b>Location</b><span><a href="https://www.google.com/maps/search/?api=1&query=Teerth+Avila+Sus+Pune" target="_blank" rel="noopener">Open map</a></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sources" id="sources">
+  <div class="heading">
+    <div class="eyebrow">Research notes</div>
+    <h2>Sources used for this demo</h2>
+    <p>This is an independently designed demo, not a claim that this is the official Teerth Avila society website. Public project information was cross-checked where possible.</p>
+  </div>
+  <div class="source-list">
+    <div>• <a href="https://www.teerthrealties.com/projects/teerth-avila" target="_blank" rel="noopener">Teerth Realties — Teerth Avila project page</a></div>
+    <div>• <a href="https://www.teerthrealties.com/about-us" target="_blank" rel="noopener">Teerth Realties — About / project history</a></div>
+    <div>• <a href="https://www.indusind.bank.in/in/en/personal/loans/home-loan/approved-project-list.html" target="_blank" rel="noopener">IndusInd Bank — approved project list</a></div>
+    <div>• <a href="https://environmentclearance.nic.in/writereaddata/FormB/agenda/110520210Q7UDAJADraft115MoM.pdf" target="_blank" rel="noopener">Government environmental-clearance record</a></div>
+    <div>• Public RERA-related project record: registration P52100034662</div>
+  </div>
+</section>
+
+<footer><span>© 2026 Teerth Avila Community Portal — Original demo</span><span>Public information only · Verify official society details before publication</span></footer>
+</body>
+</html>
